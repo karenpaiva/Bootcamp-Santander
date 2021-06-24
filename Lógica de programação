@@ -1,0 +1,97 @@
+// Cálculo da média e soma no portugol
+//Programa voltado para calcular as vacinas aplicadas nos postos
+programa {
+	funcao inicio() 
+	{
+	   real posto1, posto2, posto3, posto4, media, soma 
+	   cadeia vacina
+	   escreva("Digite qual vacina foi aplicada: ")
+	   leia (vacina)
+	   escreva("Digite quantas vacinas foram aplicadas no posto 1: ")
+	   leia (posto1)
+	   escreva("Digite quantas vacinas foram aplicadas no posto 2: ")
+	   leia (posto2)
+	   escreva("Digite quantas vacinas foram aplicadas no posto 3: ")
+	   leia (posto3)
+	   escreva("Digite quantas vacinas foram aplicadas no posto 4: ")
+	   leia (posto4)
+	   media=(posto1+posto2+posto3+posto4)/4
+	   soma=(posto1+posto2+posto3+posto4)
+	   escreva("O total de vacinas aplicadas foram: "+ soma +"\n"+ "Sua média de vacinas da " + vacina + "  aplicadas foi de: "+media)
+	   se(media>=700) {
+	       escreva("\n"+ "Meta dos postos foram batidas !")
+	   }
+	   senao {  escreva("\n"+"As metas dos postos não foram batidas!")
+	   
+	   }
+	   
+	}
+}
+
+// Uso do se no portugol voltada para a seleção de qual vacina foi aplicada
+programa {
+	funcao inicio() {
+		escreva ("1-Pfizer"+"\n"+"2-CoronaVac"+"\n"+"3-AstraZeneca"+"\n"+"4-Janssen")
+		inteiro menu = 0
+		escreva("\n"+"Qual vacina foi aplicada: ")
+		leia(menu)
+		se (menu==1){
+		    escreva("OK! Pfizer")
+		}
+		se (menu==2){
+		    escreva("OK! CoronaVac")
+		}
+		se (menu==3){
+		    escreva("OK! AstraZeneca")
+		}
+		se (menu==4){
+		    escreva("OK! Janssen")
+		}
+		
+	}
+}
+// Tabuada no portugol usada para entender o conceito de loop
+programa {
+	funcao inicio() {
+		inteiro contador, limite, resultado, tabuada
+		contador=0
+		limite=10
+		escreva("Qual tabuada você quer: ")
+		leia (tabuada)
+
+		faca {
+		    resultado = tabuada * contador
+		    escreva(tabuada+" x "+contador+" = "+resultado+"\n" )
+		    contador ++
+		} enquanto (contador<=limite)
+	}
+}
+// Vetores e loop no portugol
+programa {
+	funcao inicio() {
+	   
+		cadeia vacina[4]
+		inteiro contador=0
+		vacina[0]="Pfizer"
+		vacina[1]="CoronaVac"
+		vacina[2]="AstraZeneca"
+		vacina[3]="Janssen"
+		faca {
+		    
+		    escreva (vacina [contador]+"\n")
+		    contador ++
+		}enquanto (contador<=3)
+	}
+}
+// Matrix no portugol
+programa {
+	funcao inicio() {
+	    inteiro contador =0
+		cadeia cesta[][] = {{"Pfizer","100"}, {"CoronaVac", "200"},{"AstraZeneca","900"},{"Janssen","800"}
+		}
+    faca{
+        escreva ("Vacina: " + cesta [contador][0] + " Quantidade: "+ cesta [contador][1]+ "\n")
+        contador ++
+    }enquanto (contador <=3)
+}
+}
