@@ -1,0 +1,90 @@
+// Exercício visita a feira:
+//Você está na feira com a sua sacola e parou em uma banca. 
+//O feirante lhe entregou pimentões amarelos e vermelhos.
+//Agora iremos somar os pimetões amarelos e vermelhos para descobrir o total de pimentões na sacola.
+//Você receberá 2 inteiros que devem ser lidos e armazenados nas variáveis A (pimentões amarelos) e B (pimentões vermelhos).
+//Faça a soma de A e B atribuindo o seu resultado na variável X (total de pimentões). Apresente X como descrito na mensagem de exemplo abaixo. 
+//Não apresente outra mensagem além da mensagem especificada.
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+
+public class MinhaPrimeiraClasse {
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st = new StringTokenizer(br.readLine());
+    int a = Integer.parseInt(st.nextToken()); // pimentões amarelos
+    int b = Integer.parseInt(st.nextToken()); // pimentões vermelhos 
+    int total = a+b ; // soma das duas variáveis 
+    System.out.println("X = " + total);
+  }
+}
+
+
+//Exercício seis números ímpares:
+//Leia um valor inteiro X.
+//Em seguida apresente os 6 valores ímpares consecutivos a partir de X, um valor por linha, inclusive o X se for o caso.
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Desafio {
+	
+    public static void main(String[] args) throws IOException {
+        Scanner leitor = new Scanner(System.in);
+        int x = leitor.nextInt();
+        int cont = 0;
+
+//continue a solucao de acordo com o solicitado no enunciado
+
+        while (cont < 6 ) {
+        	if (x  % 2  == 1) {
+        		System.out.println(x);
+        		cont++   ;
+        	}
+    		x++;
+        }
+    }
+	
+}
+
+
+//Exercício quantidades de números positivos:
+//Crie um programa que leia 6 valores.
+//Você poderá receber valores negativos e/ou positivos como entrada, devendo desconsiderar os valores nulos. 
+//Em seguida, apresente a quantidade de valores positivos digitados.
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+public class Main {
+
+   public static void main(String[] args)throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Double> lista = new ArrayList();
+    
+    
+   int y =0;    for  (int i = 0; i < 6; i++) {  
+       // analisar todos so numeros 
+       String entrada = br.readLine();
+
+        lista.add(Double.parseDouble(entrada));
+    
+       
+         if (lista.get(i) >0 ) {
+        	
+       	 	y++   ;
+       	}
+   	
+       
+        }System.out.println(y+" valores positivos" ); //print do quantidade de numeros positivos 
+
+}
+}
+
